@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="کارت دعوت‌ساز فارسی: قالب عاشقانه، دوستانه، رسمی و آنلاین + ذخیره عکس">
+<meta name="theme-color" content="#5b3df5">
+<title>کارت دعوت‌ساز فارسی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Dancing+Script:wght@500;700&family=Inter:wght@400;600;800&family=Katibeh&family=Lalezar&family=Playfair+Display:ital,wght@0,500;0,800;1,500&family=Reem+Kufi:wght@500;700&family=Rakkas&family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+:root{--bg:#eef0f6;--ink:#1b1f2a;--muted:#68707f;--panel:#ffffff;--panel2:#f6f7fb;--line:#dde1ea;--acc:#5b3df5;--acc2:#9a86ff;--acc-soft:rgba(91,61,245,.14);--grad:linear-gradient(135deg,#5b3df5,#a855f7 55%,#ec4899);--shadow:0 12px 32px rgba(30,27,75,.1);--r:20px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1016;--ink:#eef0f7;--muted:#9aa1b5;--panel:#171a24;--panel2:#1e2230;--line:#2c3245;--acc:#9a86ff;--acc2:#c4b5fd;--acc-soft:rgba(154,134,255,.18);--shadow:0 14px 36px rgba(0,0,0,.45)}}
+:root[data-theme="dark"]{--bg:#0e1016;--ink:#eef0f7;--muted:#9aa1b5;--panel:#171a24;--panel2:#1e2230;--line:#2c3245;--acc:#9a86ff;--acc2:#c4b5fd;--acc-soft:rgba(154,134,255,.18);--shadow:0 14px 36px rgba(0,0,0,.45)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif;line-height:1.7;min-height:100vh;
+background:radial-gradient(900px 320px at 85% -60px,rgba(168,85,247,.22),transparent 60%),radial-gradient(800px 300px at 10% 0,rgba(91,61,245,.18),transparent 60%),radial-gradient(700px 500px at 50% 110%,rgba(236,72,153,.1),transparent 60%),var(--bg)}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 18px 48px}
+/* hero */
+.hero{display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:18px 20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset-inline:0;top:0;height:4px;background:var(--grad)}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:52px;height:52px;flex:none;border-radius:16px;background:var(--grad);display:grid;place-items:center;font-size:26px;box-shadow:0 8px 20px rgba(168,85,247,.4)}
+h1{font-size:24px;font-weight:800;margin:0;letter-spacing:-.2px}
+.sub{margin:2px 0 0;color:var(--muted);font-size:13.5px}
+.badges{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.badge{font-size:11.5px;font-weight:600;color:var(--acc);background:var(--acc-soft);border:1px solid transparent;padding:2px 10px;border-radius:999px}
+.theme{flex:none;border:1px solid var(--line);background:var(--panel2);color:var(--ink);border-radius:999px;padding:9px 16px;font:600 13px 'Vazirmatn',sans-serif;cursor:pointer;transition:.2s}
+.theme:hover{border-color:var(--acc);transform:translateY(-1px)}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600}
+.step b{width:26px;height:26px;flex:none;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-size:13px}
+.step span{color:var(--muted);font-weight:400;font-size:12px;display:block}
+/* sections */
+.sec{font-size:13px;font-weight:800;margin:18px 2px 10px;display:flex;align-items:center;gap:8px;color:var(--muted)}
+.sec::after{content:"";flex:1;height:1px;background:var(--line);border-radius:99px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:0;margin:0}
+.tab{border:2px solid var(--line);background:var(--panel);color:var(--ink);border-radius:18px;padding:14px 10px;font:700 14px 'Vazirmatn',sans-serif;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;justify-content:center;transition:.2s;box-shadow:0 2px 0 transparent}
+.tab i{width:26px;height:26px;border-radius:50%;flex:none;border:2px solid #ffffff88;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.tab small{font-size:11px;font-weight:400;color:var(--muted)}
+.tab:hover{transform:translateY(-2px);border-color:var(--acc)}
+.tab[aria-pressed="true"]{border-color:var(--acc);background:linear-gradient(180deg,var(--acc-soft),transparent 140%),var(--panel);box-shadow:0 8px 22px rgba(91,61,245,.22)}
+.tab:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.grid{display:grid;grid-template-columns:1fr 400px;gap:24px;align-items:start;margin-top:6px}
+.stage{position:sticky;top:16px;display:flex;flex-direction:column;align-items:stretch;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:var(--shadow)}
+.preview-glow{position:relative;display:flex;justify-content:center}
+.preview-glow::before{content:"";position:absolute;inset:8% 12%;background:var(--grad);filter:blur(46px);opacity:.32;z-index:0}
+form{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px;box-shadow:var(--shadow)}
+.form-h{grid-column:1/-1;font-size:14px;font-weight:800;display:flex;align-items:center;gap:8px;margin:2px 0 0}
+.form-h .dot{width:9px;height:9px;border-radius:50%;background:var(--grad)}
+label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600}
+label.w{grid-column:1/-1}
+input,textarea,select{font:400 14.5px 'Vazirmatn',sans-serif;color:var(--ink);background:var(--panel2);border:1.5px solid var(--line);border-radius:13px;padding:10px 12px;width:100%;transition:.18s}
+input:focus,textarea:focus,select:focus{border-color:var(--acc);background:var(--panel);box-shadow:0 0 0 4px var(--acc-soft);outline:none}
+textarea{resize:vertical;min-height:76px}
+.fontrow{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:12px;background:linear-gradient(180deg,var(--acc-soft),transparent 160%),var(--panel2);border:1px solid var(--line);border-radius:16px;padding:14px}
+.fontrow .full{grid-column:1/-1}
+input[type=range]{padding:0;border:0;background:transparent;accent-color:var(--acc);height:28px}
+input[type=range]::-webkit-slider-thumb{cursor:pointer}
+.hint{grid-column:1/-1;font-size:12px;font-weight:400;color:var(--muted);margin:-4px 0 0}
+.btns{display:grid;grid-template-columns:1fr;gap:8px}
+.btn{border:0;border-radius:15px;padding:13px 18px;font:800 15px 'Vazirmatn',sans-serif;cursor:pointer;background:var(--grad);color:#fff;box-shadow:0 10px 24px rgba(139,92,246,.38);transition:.2s}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.alt{background:var(--panel2);color:var(--ink);border:1.5px solid var(--line);box-shadow:none;font-weight:600}
+.btn.alt:hover{border-color:var(--acc)}
+.btnrow{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.btn:disabled{opacity:.6;cursor:wait;transform:none}
+#status{font-size:13px;min-height:22px;color:var(--muted);text-align:center;background:var(--panel2);border-radius:999px;padding:4px 12px}
+#status:not(:empty){color:var(--acc)}
+.foot{margin-top:26px;font-size:12px;color:var(--muted);text-align:center}
+.foot a{color:var(--acc);text-decoration:none;font-weight:700}
+.tabs::-webkit-scrollbar,.vars::-webkit-scrollbar{height:6px}
+.tabs::-webkit-scrollbar-thumb,.vars::-webkit-scrollbar-thumb{background:var(--line);border-radius:99px}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.stage{position:static;order:-1}form{grid-template-columns:1fr}.fontrow{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(4,minmax(130px,1fr));overflow-x:auto}.steps{grid-template-columns:1fr 1fr 1fr;overflow-x:auto}h1{font-size:20px}.hero{padding:14px}}
+
+/* ---------- card ---------- */
+.vars{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin:0}
+.chip{flex:0 0 auto;border:1.5px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:9px 16px 9px 12px;font:700 13px 'Vazirmatn',sans-serif;cursor:pointer;display:flex;gap:8px;align-items:center;box-shadow:var(--shadow);transition:.2s}
+.chip i{width:16px;height:16px;border-radius:6px;border:1px solid #0002}
+.chip:hover{transform:translateY(-2px);border-color:var(--acc)}
+.chip[aria-pressed="true"]{border-color:var(--acc);background:linear-gradient(180deg,var(--acc-soft),transparent 150%),var(--panel);box-shadow:0 8px 20px rgba(91,61,245,.25)}
+.card{width:100%;max-width:380px;min-height:560px;position:relative;overflow:hidden;padding:var(--pt,34px) 28px 28px;display:flex;flex-direction:column;justify-content:center;gap:12px;background:var(--bg);color:var(--fg);font-family:var(--bf,'Vazirmatn',sans-serif);border:var(--cb,0);border-radius:var(--cr,20px);text-align:var(--al,center);box-shadow:0 18px 50px rgba(0,0,0,.22)}
+.card>*{position:relative;z-index:2}
+.deco{position:absolute!important;inset:0;z-index:1!important;pointer-events:none}
+.deco svg{display:block;width:100%;height:100%}
+.card::after{content:"";position:absolute;inset:var(--fi,12px);border:var(--fr,0);outline:var(--fo,0);outline-offset:5px;border-radius:calc(var(--cr,20px) - 8px);z-index:1;pointer-events:none}
+.card h2{margin:0;line-height:1.35;font-family:var(--tf);font-size:var(--ts,44px);font-weight:var(--tw,400);color:var(--tc,inherit);text-shadow:var(--tsh,none);transform:var(--tr,none);text-wrap:balance}
+.card .to{margin:0;font-size:var(--mf,15px);opacity:.92}
+.card .msg{margin:0;font-size:var(--mf,15px);line-height:2}
+.card .msg{max-width:30ch;margin-inline:var(--mm,auto)}
+.card .info{margin:8px 0 0;display:grid;gap:8px;text-align:right}
+.card .row{display:flex;justify-content:space-between;gap:12px;align-items:baseline;background:var(--rbg,none);border:var(--rb,0);border-radius:var(--rr,0);padding:var(--rp,0);box-shadow:var(--rsh,none)}
+.card dt{font-size:12px;flex:none;color:var(--dt,inherit);opacity:var(--dto,.75)}
+.card dd{margin:0;font-weight:var(--ddw,600);font-size:var(--ddf,15px);color:var(--dd,inherit);text-align:left;overflow-wrap:anywhere}
+.card .from{margin:8px 0 0;font-size:var(--mf,15px);color:var(--fc,inherit)}
+.ltr{direction:ltr;unicode-bidi:isolate}
+
+/* ===== عاشقانه‌ها (بازطراحی‌شده) ===== */
+/* d1: مهتاب کرم — روشن و مینیمال، قاب طلایی دوتایی */
+[data-v=d1]{--bg:linear-gradient(180deg,#fffdf8 0%,#fdf3e6 55%,#f6e3cd 100%);--fg:#452032;--bf:'Vazirmatn',Tahoma,sans-serif;--tf:'Katibeh';--ts:54px;--tw:400;--tc:#7a1e3a;--tsh:none;--mf:16px;--cb:1px solid #e7cfae;--cr:26px;--fr:1.5px solid #c99a5e;--fo:1px solid rgba(201,154,94,.45);--fi:12px;--pt:86px;--rbg:rgba(255,255,255,.75);--rb:1px solid #ecd7ba;--rr:14px;--rp:8px 14px;--rsh:none;--dd:#7a1e3a;--ddf:17px;--ddw:600;--dt:#9a6b3f;--dto:1;--fc:#7a1e3a;--al:center;--mm:auto}
+[data-v=d1] .to{color:#9a6b3f;font-weight:600}
+[data-v=d1] .row{border-right:3px solid #c99a5e}
+/* d2: باغ رز — صورتی مدرن، کارت شیشه‌ای */
+[data-v=d2]{--bg:linear-gradient(180deg,#fff7f9 0%,#ffe4ea 60%,#ffcdd9 100%);--fg:#54122a;--bf:'Vazirmatn',Tahoma,sans-serif;--tf:'Aref Ruqaa';--ts:48px;--tw:700;--tc:#a8123f;--tsh:none;--mf:16px;--cb:1px solid #f2aebd;--cr:30px;--fr:0;--fo:0;--fi:14px;--pt:96px;--rbg:rgba(255,255,255,.85);--rb:1px solid #f4b3c2;--rr:18px;--rp:9px 15px;--rsh:0 8px 22px rgba(168,18,63,.12);--dd:#a8123f;--ddf:17px;--fc:#a8123f}
+[data-v=d2] .msg{background:rgba(255,255,255,.6);border-radius:14px;padding:8px 12px}
+/* d3: شب ستاره‌ای — سرمه‌ای لوکس با طلایی */
+[data-v=d3]{--bg:radial-gradient(circle at 50% 0%,#2b2560 0,#141238 45%,#070818 100%);--fg:#e8e6ff;--bf:'Vazirmatn',Tahoma,sans-serif;--tf:'Katibeh';--ts:62px;--tw:400;--tc:#f3d98b;--tsh:0 0 22px rgba(243,217,139,.35);--mf:16px;--cb:1px solid #3b3670;--cr:24px;--fr:1px solid rgba(243,217,139,.7);--fo:1px solid rgba(243,217,139,.25);--fi:13px;--pt:118px;--rbg:rgba(255,255,255,.08);--rb:1px solid rgba(243,217,139,.3);--rr:14px;--rp:8px 14px;--dd:#fff;--ddf:17px;--ddw:600;--dt:#c9c4ff;--dto:1;--fc:#f3d98b}
+[data-v=d3] .to{letter-spacing:.2px;color:#c9c4ff}
+/* d4: غروب دریا — گرادیان غروب ملایم + شیشه */
+[data-v=d4]{--bg:linear-gradient(180deg,#ffe9c9 0%,#ff9eb0 38%,#9b4a8b 70%,#2e1c50 100%);--fg:#fff;--bf:'Vazirmatn',Tahoma,sans-serif;--tf:'Aref Ruqaa';--ts:50px;--tw:700;--tc:#fff;--tsh:0 2px 18px rgba(90,20,60,.55);--mf:16px;--cb:0;--cr:28px;--fr:1px solid rgba(255,255,255,.55);--fo:0;--fi:12px;--pt:132px;--rbg:rgba(255,255,255,.22);--rb:1px solid rgba(255,255,255,.45);--rr:16px;--rp:8px 14px;--rsh:none;--dd:#fff;--ddf:17px;--dt:#ffe9c9;--dto:1;--fc:#fff}
+/* d5: نئون شیک — تیره با نئون ملایم (نه تند) */
+[data-v=d5]{--bg:radial-gradient(circle at 50% 18%,#341020 0,#160710 48%,#0a0408 100%);--fg:#ffe3ee;--bf:'Vazirmatn',Tahoma,sans-serif;--tf:'Aref Ruqaa';--ts:48px;--tw:700;--tc:#fff;--tsh:0 0 8px rgba(255,255,255,.8),0 0 20px rgba(255,61,139,.65);--mf:16px;--cb:1px solid rgba(255,61,139,.55);--cr:24px;--fr:0;--fo:0;--fi:12px;--pt:150px;--rbg:rgba(255,61,139,.1);--rb:1px solid rgba(255,61,139,.6);--rr:14px;--rp:8px 14px;--rsh:0 0 14px rgba(255,61,139,.25);--dd:#fff;--ddf:17px;--fc:#ff9ec2}
+
+/* friends */
+[data-v=f1]{--bg:#ffd23f;--fg:#161616;--bf:'Vazirmatn',sans-serif;--tf:'Lalezar';--ts:60px;--tsh:4px 4px 0 #ff4d8d;--tr:rotate(-3deg);--cb:5px solid #161616;--cr:26px;--rbg:#fff;--rb:3px solid #161616;--rr:14px;--rp:6px 12px;--rsh:4px 4px 0 #161616}
+[data-v=f1] .row:nth-child(even){background:#8be9ff;transform:rotate(1.2deg)}
+[data-v=f1] .row:nth-child(odd){transform:rotate(-1deg)}
+[data-v=f2]{--bg:repeating-linear-gradient(0deg,#ffffff0d 0 2px,transparent 2px 4px),#1b0f3a;--fg:#e8e0ff;--bf:'Vazirmatn',sans-serif;--tf:'Rakkas';--ts:54px;--tc:#ffe14d;--tsh:3px 3px 0 #ff4d8d;--cb:6px solid #4df0ff;--cr:6px;--rbg:#2a1a5e;--rb:3px solid #ffe14d;--rp:6px 12px;--dd:#4df0ff}
+[data-v=f3]{--bg:radial-gradient(#ff5a5a 22%,transparent 24%) 0 0/16px 16px,#fff;--fg:#111;--bf:'Vazirmatn',sans-serif;--tf:'Lalezar';--ts:60px;--tsh:3px 3px 0 #ffd23f;--cb:5px solid #111;--cr:8px;--rbg:#fff;--rb:3px solid #111;--rp:6px 12px;--rsh:-4px 4px 0 #2b50ff;--pt:60px}
+/* office */
+[data-v=o1]{--bg:#eef2f1;--fg:#0d3b3f;--bf:'Vazirmatn',sans-serif;--tf:'Reem Kufi';--ts:42px;--tw:700;--cb:0;--cr:6px;--al:right;--mm:0;--dt:#b8643a;--dto:1;--fc:#0d3b3f}
+[data-v=o1]{border-right:14px solid #0d3b3f}
+[data-v=o1] .row{border-top:2px solid #b8643a;padding-top:8px}
+[data-v=o2]{--bg:#fff;--fg:#14171a;--bf:'Vazirmatn',sans-serif;--tf:'Vazirmatn';--ts:38px;--tw:800;--al:right;--mm:0;--dt:#e4572e;--dto:1;--pt:50px;--cr:8px}
+[data-v=o2] .row{border-bottom:1px solid #d8dbde;padding-bottom:8px}
+[data-v=o3]{--bg:#1a2024;--fg:#e8e4d8;--bf:'Vazirmatn',sans-serif;--tf:'Reem Kufi';--ts:40px;--tw:700;--tc:#d4b062;--fr:1px solid rgba(212,176,98,.6);--fi:14px;--dt:#d4b062;--dto:1;--fc:#d4b062;--pt:70px;--cr:8px}
+[data-v=o3] .row{border-top:1px solid rgba(212,176,98,.35);padding-top:8px}
+/* online */
+[data-v=n1]{--bg:#0a0e27;--fg:#dfe4ff;--bf:'Vazirmatn',sans-serif;--tf:'Rakkas';--ts:50px;--tc:#4df0ff;--tsh:0 0 20px #a58bff;--cb:1px solid #3a4280;--cr:20px;--rbg:#141a42;--rb:1px solid #3a4280;--rr:12px;--rp:9px 12px;--dt:#a58bff;--dto:1;--pt:62px}
+[data-v=n1] .row:last-child dd{color:#4df0ff;font-size:13px}
+[data-v=n2]{--bg:linear-gradient(135deg,#cbbcff,#a6f2de);--fg:#1d1650;--bf:'Vazirmatn',sans-serif;--tf:'Vazirmatn';--ts:36px;--tw:800;--tc:#1d1650;--rbg:rgba(255,255,255,.75);--rb:1px solid #fff;--rr:16px;--rp:9px 14px;--cr:26px;--dt:#5b3df5;--dto:1}
+[data-v=n3]{--bg:repeating-linear-gradient(0deg,rgba(125,255,138,.06) 0 1px,transparent 1px 3px),#050b05;--fg:#7dff8a;--bf:'Courier New',monospace;--tf:'Courier New',monospace;--ts:30px;--tw:700;--tc:#7dff8a;--tsh:0 0 10px rgba(125,255,138,.6);--cb:1px solid #2f7a39;--cr:8px;--rb:1px dashed #3a8f45;--rp:7px 12px;--pt:62px;--al:right;--mm:0}
+/* ===== طرح‌های خلاقانه جدید ===== */
+/* d6: نامه عاشقانه — کاغذ کرافت با تمبر و مهر موم */
+[data-v=d6]{--bg:linear-gradient(180deg,#f7ecd9 0%,#efdbbd 100%);--fg:#4b2c1c;--bf:'Vazirmatn',Tahoma,sans-serif;--tf:'Katibeh';--ts:50px;--tc:#8c2f1b;--tsh:none;--mf:16px;--cb:1px solid #c9a876;--cr:10px;--fr:2px dashed rgba(140,47,27,.5);--fi:14px;--pt:110px;--rbg:rgba(255,255,255,.7);--rb:1px solid #d9bd93;--rr:6px;--rp:8px 14px;--dd:#8c2f1b;--ddf:17px;--dt:#8a6a3f;--dto:1;--fc:#8c2f1b;--al:center}
+[data-v=d6] .msg{font-style:italic;border-right:3px solid #8c2f1b;padding-right:10px}
+/* f4: پیک‌نیک چهارخونه — شاد و تابستونی */
+[data-v=f4]{--bg:repeating-linear-gradient(0deg,rgba(232,65,60,.1) 0 18px,transparent 18px 36px),repeating-linear-gradient(90deg,rgba(232,65,60,.1) 0 18px,transparent 18px 36px),#fff8ec;--fg:#3d2b00;--bf:'Vazirmatn',sans-serif;--tf:'Lalezar';--ts:58px;--tc:#e8413c;--tsh:3px 3px 0 #ffd23f;--cb:5px solid #2f7d4f;--cr:24px;--pt:104px;--rbg:#fff;--rb:3px solid #2f7d4f;--rr:16px;--rp:7px 13px;--rsh:4px 4px 0 rgba(47,125,79,.35);--dd:#2f7d4f}
+/* o4: گرادیان مدرن — شرکتی امروزی */
+[data-v=o4]{--bg:linear-gradient(135deg,#1e1b4b 0%,#5b3df5 55%,#06b6d4 100%);--fg:#fff;--bf:'Inter','Vazirmatn',sans-serif;--tf:'Playfair Display','Reem Kufi',serif;--ts:40px;--tw:800;--tc:#fff;--tsh:0 4px 24px rgba(0,0,0,.3);--mf:15px;--cb:0;--cr:24px;--fr:1px solid rgba(255,255,255,.5);--fi:12px;--pt:70px;--al:left;--mm:0;--rbg:rgba(255,255,255,.14);--rb:1px solid rgba(255,255,255,.35);--rr:14px;--rp:8px 14px;--dt:#d8ccff;--dto:1;--dd:#fff}
+/* n4: پادکست زنده — تیره با دکمه قرمز LIVE */
+[data-v=n4]{--bg:radial-gradient(circle at 50% 0%,#2a1030 0,#12060f 60%);--fg:#ffe9f3;--bf:'Inter','Vazirmatn',sans-serif;--tf:'Playfair Display','Rakkas',serif;--ts:44px;--tc:#fff;--tsh:none;--mf:15px;--cb:1px solid #472;--cb:1px solid #4a2135;--cr:22px;--fr:0;--pt:104px;--rbg:rgba(255,255,255,.07);--rb:1px solid #5b2b44;--rr:14px;--rp:8px 14px;--dt:#ff8fb0;--dto:1;--dd:#4df0ff}
+/* LTR (انگلیسی) */
+.card[dir="ltr"] .info{text-align:left}
+.card[dir="ltr"] dd{text-align:right}
+.card[dir="ltr"] .msg{margin-inline:auto}
+html[lang="en"] body{letter-spacing:.1px}
+html[lang="en"] .step b{font-family:'Inter',sans-serif}
+.topbtns{display:flex;gap:8px;flex:none}
+.lang{border:1px solid var(--line);background:var(--panel2);color:var(--ink);border-radius:999px;padding:9px 16px;font:700 13px 'Vazirmatn','Inter',sans-serif;cursor:pointer;transition:.2s}
+.lang[aria-pressed="true"]{background:var(--grad);color:#fff;border-color:transparent}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="brand">
+      <div class="logo">💌</div>
+      <div>
+        <h1 data-i18n="title">کارت دعوت‌ساز فارسی</h1>
+        <p class="sub" data-i18n="sub">در کمتر از یک دقیقه، کارت دعوت شیک بساز و عکس بگیر.</p>
+        <div class="badges"><span class="badge" data-i18n="b1">✨ ۱۸ طرح اختصاصی</span><span class="badge" data-i18n="b2">🎨 فونت فارسی و انگلیسی</span><span class="badge" data-i18n="b3">📸 خروجی PNG</span></div>
+      </div>
+    </div>
+    <div class="topbtns">
+      <button class="lang" id="lang" type="button" aria-pressed="false">EN / فارسی</button>
+      <button class="theme" id="theme" type="button" data-i18n="theme">🌙 تیره / روشن</button>
+    </div>
+  </header>
+  <div class="steps">
+    <div class="step"><b>۱</b><div><span data-i18n="s1">انتخاب دسته</span><span data-i18n="s1d">عاشقانه، دوستانه، رسمی</span></div></div>
+    <div class="step"><b>۲</b><div><span data-i18n="s2">شخصی‌سازی</span><span data-i18n="s2d">متن، فونت و اندازه</span></div></div>
+    <div class="step"><b>۳</b><div><span data-i18n="s3">ذخیره عکس</span><span data-i18n="s3d">ارسال در واتساپ و اینستا</span></div></div>
+  </div>
+  <div class="sec" data-i18n="sec1">۱ — دسته‌بندی</div>
+  <div class="tabs" id="tabs" role="group" aria-label="قالب‌ها"></div>
+  <div class="sec" data-i18n="sec2">۲ — انتخاب طرح</div>
+  <div class="vars" id="vars" role="group" aria-label="طرح‌ها"></div>
+  <div class="grid">
+    <form id="form" onsubmit="return false">
+      <div class="form-h"><span class="dot"></span><span data-i18n="ftext">متن دعوت</span></div>
+      <label class="w"><span data-i18n="ftitle">عنوان کارت</span><input id="f-title"></label>
+      <label><span data-i18n="fto">نام مهمان</span><input id="f-to"></label>
+      <label><span data-i18n="ffrom">نام دعوت‌کننده</span><input id="f-from"></label>
+      <label><span data-i18n="fdate">تاریخ</span><input id="f-date"></label>
+      <label><span data-i18n="ftime">ساعت</span><input id="f-time"></label>
+      <label class="w"><span id="place-label">مکان</span><input id="f-place" dir="auto"></label>
+      <label class="w"><span data-i18n="fmsg">پیام</span><textarea id="f-msg"></textarea></label>
+      <div class="form-h"><span class="dot"></span><span data-i18n="ffont">فونت و اندازه</span></div>
+      <div class="fontrow">
+        <label><span data-i18n="ftitlef">فونت عنوان</span>
+          <select id="f-tfont">
+            <option value="auto" data-i18n="fauto">پیش‌فرض طرح (پیشنهادی)</option>
+            <option value="'Vazirmatn',Tahoma,sans-serif">Vazirmatn — وزیرمتن</option>
+            <option value="'Aref Ruqaa',serif">Aref Ruqaa — عارف رقعه</option>
+            <option value="'Katibeh',serif">Katibeh — کتیبه</option>
+            <option value="'Playfair Display',serif">Playfair Display — elegant</option>
+            <option value="'Dancing Script',cursive">Dancing Script — romantic</option>
+            <option value="'Lalezar',cursive">Lalezar — لاله‌زار</option>
+            <option value="'Rakkas',serif">Rakkas — رکاس</option>
+            <option value="'Reem Kufi',sans-serif">Reem Kufi — ریم کوفی</option>
+            <option value="'Inter',sans-serif">Inter — clean</option>
+          </select>
+        </label>
+        <label><span data-i18n="fbodyf">فونت متن</span>
+          <select id="f-bfont">
+            <option value="auto" data-i18n="fauto2">پیش‌فرض طرح</option>
+            <option value="'Vazirmatn',Tahoma,sans-serif" selected>Vazirmatn — وزیرمتن</option>
+            <option value="'Inter',sans-serif">Inter — clean</option>
+            <option value="'Playfair Display',serif">Playfair Display</option>
+            <option value="'Katibeh',serif">Katibeh — کتیبه</option>
+          </select>
+        </label>
+        <label class="full"><span><span data-i18n="fsize">اندازه عنوان</span>: <span id="tsize-val">—</span></span>
+          <input type="range" id="f-tsize" min="28" max="80" step="1" value="48">
+        </label>
+        <p class="hint" data-i18n="fhint">نکته: فونت عنوان را برای حال‌وهوا عوض کن (مثلاً کتیبه برای عاشقانه، وزیرمتن برای رسمی). اندازه با اسلایدر تنظیم می‌شود.</p>
+      </div>
+    </form>
+    <div class="stage">
+      <div class="preview-glow">
+      <div class="card" id="card" data-v="d1">
+        <div class="deco" id="deco" aria-hidden="true"></div>
+        <h2 id="c-title"></h2>
+        <p class="to" id="c-to"></p>
+        <p class="msg" id="c-msg"></p>
+        <dl class="info">
+          <div class="row"><dt data-i18n="when">زمان</dt><dd id="c-when" dir="auto"></dd></div>
+          <div class="row"><dt id="c-place-label">مکان</dt><dd id="c-place" dir="auto"></dd></div>
+        </dl>
+        <p class="from" id="c-from"></p>
+      </div>
+      </div>
+      <div class="btns">
+        <button class="btn" id="dl" type="button" data-i18n="dl">📸 ذخیره به‌صورت عکس</button>
+        <div class="btnrow">
+        <button class="btn alt" id="cp" type="button" data-i18n="cp">کپی متن دعوت</button>
+        <button class="btn alt" id="rs" type="button" data-i18n="rs">ریست فونت</button>
+        </div>
+      </div>
+      <div id="status" role="status"></div>
+    </div>
+  </div>
+  <p class="foot" data-i18n="foot">ساخته شده با 💜 برای اشتراک‌گذاری لحظه‌های خوب — تک‌فایل، مناسب GitHub Pages.</p>
+</div>
+<script>
+function S(x,p){return '<svg viewBox="0 0 380 560" width="100%" height="100%" preserveAspectRatio="'+(p||'xMidYMin slice')+'">'+x+'</svg>'}
+function st(n,c,s){var o='',i,x,y;for(i=0;i<n;i++){s=(s*9301+49297)%233280;x=s/233280*380;s=(s*9301+49297)%233280;y=s/233280*560;o+='<circle cx="'+x.toFixed(0)+'" cy="'+y.toFixed(0)+'" r="'+(0.6+i%3*0.5)+'" fill="'+c+'" opacity="'+(0.4+i%4*0.15)+'"/>'}return o}
+var HT='M190 160C110 105 125 40 165 45 180 47 190 60 190 70 190 60 200 47 215 45 255 40 270 105 190 160z';
+var V=[
+{k:'d1',c:'date',n:'مهتاب کرم',sw:'#c99a5e',ts:54,t:'در مهتاب، منتظر توام',m:'یه شام آروم، یه آسمون پرستاره و کلی حرف نگفته. می‌آیی؟',s:S('<ellipse cx="190" cy="52" rx="34" ry="34" fill="#f6e3cd"/><circle cx="190" cy="52" r="22" fill="#fffdf8"/><circle cx="182" cy="46" r="4" fill="#e8cfa8" opacity=".7"/><circle cx="198" cy="58" r="3" fill="#e8cfa8" opacity=".6"/><g fill="none" stroke="#c99a5e" stroke-width="1.4" opacity=".85"><path d="M40 500c30-14 60-14 90 0s60 14 90 0 60-14 90 0"/><path d="M40 516c30-14 60-14 90 0s60 14 90 0 60-14 90 0" opacity=".5"/></g><g fill="#a8123f" opacity=".9"><circle cx="60" cy="90" r="2.5"/><circle cx="320" cy="110" r="2.5"/><circle cx="300" cy="70" r="2"/></g>')},
+{k:'d2',c:'date',n:'باغ رز',sw:'#d6335c',ts:48,t:'به باغ من بیا',m:'گل‌ها امشب منتظرند، ولی من فقط منتظر توام. می‌آیی قدم بزنیم؟',s:S('<defs><g id="ro"><circle r="24" fill="#d6335c"/><circle r="16" fill="#a8123f"/><path d="M0 0c5-7 12-2 9 4s-12 7-17 0 3-16 12-16 17 9 14 19" fill="none" stroke="#ffc2d1" stroke-width="2.5"/></g><g id="lf"><ellipse rx="28" ry="9" fill="#3d8a5a"/></g></defs><path d="M-10 100C60 80 110 50 170 24" stroke="#3d8a5a" stroke-width="3" fill="none"/><use href="#lf" transform="translate(58 76) rotate(-25)"/><use href="#lf" transform="translate(120 48) rotate(-35)"/><use href="#ro" transform="translate(40 50) scale(1.4)"/><use href="#ro" transform="translate(112 22) scale(.85)"/><use href="#lf" transform="translate(300 490) rotate(-30)"/><use href="#ro" transform="translate(344 514) scale(1.4)"/><use href="#ro" transform="translate(286 534) scale(.8)"/>')},
+{k:'d3',c:'date',n:'شب ستاره‌ای',sw:'#1b1450',ts:62,t:'آسمون امشب مال ماست',m:'یه پتو، یه فلاسک چای و آسمونی که ستاره‌هاش فقط برای ما چشمک می‌زنن.',s:S(st(70,'#fff',3)+'<path d="'+HT+'" transform="translate(0 -12)" fill="none" stroke="#f3d98b" stroke-width="1.2" stroke-dasharray="3 5" opacity=".85"/><g fill="#f3d98b"><circle cx="190" cy="168" r="3.2"/><circle cx="165" cy="53" r="2.8"/><circle cx="215" cy="53" r="2.8"/><circle cx="140" cy="93" r="2.2"/><circle cx="240" cy="93" r="2.2"/></g><circle cx="330" cy="68" r="3.5" fill="#fff"/><path d="M330 68l-58 34" stroke="#fff" stroke-width="1.6" opacity=".6"/>')},
+{k:'d4',c:'date',n:'غروب دریا',sw:'#ff7e9d',ts:50,t:'غروب با من؟',m:'بیا خورشید رو با هم بدرقه کنیم. بقیه‌ی شب هم با من.',s:S('<circle cx="190" cy="108" r="52" fill="#fff6dd" opacity=".95"/><circle cx="190" cy="108" r="76" fill="#fff6dd" opacity=".22"/><g stroke="#fff" stroke-width="2" opacity=".55" fill="none"><path d="M0 480q48-10 95 0t95 0 95 0 95 0"/><path d="M0 505q48-10 95 0t95 0 95 0 95 0"/><path d="M0 530q48-10 95 0t95 0 95 0 95 0"/></g><g fill="#fff" opacity=".85"><circle cx="70" cy="60" r="2"/><circle cx="310" cy="70" r="2"/><circle cx="285" cy="45" r="1.6"/></g>')},
+{k:'d5',c:'date',n:'نئون شیک',sw:'#ff3d8b',ts:48,t:'امشب روشنِ روشنیم',m:'چراغ‌ها خاموش، نئون‌ها روشن. یه شب فقط برای دو نفر.',s:S('<path d="'+HT+'" transform="translate(0 2)" fill="none" stroke="#ff3d8b" stroke-width="12" opacity=".22"/><path d="'+HT+'" transform="translate(0 2)" fill="none" stroke="#ff3d8b" stroke-width="4.5"/><path d="'+HT+'" transform="translate(0 2)" fill="none" stroke="#fff" stroke-width="1.4"/>'+st(12,'#ff8fc0',11))},
+{k:'f1',c:'friends',n:'استیکر شاد',ne:'Happy Sticker',sw:'#ffd23f',ts:60,s:S('<g stroke="#161616" stroke-width="3"><circle cx="40" cy="30" r="10" fill="#ff4d8d"/><rect x="320" y="60" width="18" height="18" rx="3" fill="#2b50ff" transform="rotate(20 329 69)"/><circle cx="340" cy="480" r="12" fill="#fff"/><path d="M34 490l16 28 16-28z" fill="#ff4d8d"/><circle cx="300" cy="22" r="7" fill="#8be9ff"/><path d="M60 500q15-18 30 0t30 0" fill="none" stroke="#2b50ff" stroke-width="3"/><circle cx="80" cy="120" r="5" fill="#2b50ff"/><circle cx="310" cy="420" r="6" fill="#ff4d8d"/><path d="M300 90q10 10 20 0" fill="none" stroke="#161616" stroke-width="3"/></g>')},
+{k:'f2',c:'friends',n:'آرکید',sw:'#1b0f3a',ts:54,t:'بازی شروع شد!',m:'یه دست بازی، کلی خنده و حریف‌هایی که باید شکست بخورن. آماده‌ای؟',s:S('<g fill="#ff4d8d"><rect x="14" y="14" width="12" height="12"/><rect x="354" y="14" width="12" height="12"/></g><g fill="#4df0ff"><rect x="30" y="30" width="8" height="8"/><rect x="342" y="30" width="8" height="8"/><rect x="30" y="500" width="12" height="12"/><rect x="338" y="500" width="12" height="12"/></g>')},
+{k:'f3',c:'friends',n:'کمیک',sw:'#fff',ts:60,t:'بوم! دورهمی!',m:'قهرمان‌ها دور هم جمع می‌شن و امشب شهر رو می‌ترکونن. تو هم بیا!',s:S('<polygon points="'+(function(){var p=[],i,r;for(i=0;i<24;i++){r=i%2?112:152;p.push((190+r*Math.cos(i*Math.PI/12)).toFixed(0)+','+(128+r*0.8*Math.sin(i*Math.PI/12)).toFixed(0))}return p.join(' ')})()+'" fill="#ffd23f" stroke="#111" stroke-width="4"/>')},
+{k:'o1',c:'office',n:'کلاسیک فیروزه‌ای',sw:'#0d3b3f',ts:42,s:S('<g fill="none" stroke="#b8643a" stroke-width="1.5" opacity=".8"><path d="M0 0h120v120"/><path d="M0 0l120 120"/></g>','xMinYMin slice')},
+{k:'o2',c:'office',n:'مینیمال سفید',ne:'Minimal White',sw:'#e4572e',ts:38,s:S('<rect width="380" height="12" fill="#e4572e"/><rect x="300" y="12" width="26" height="26" fill="#14171a"/><circle cx="40" cy="60" r="4" fill="#e4572e"/><circle cx="58" cy="60" r="4" fill="#14171a" opacity=".25"/><circle cx="76" cy="60" r="4" fill="#14171a" opacity=".15"/><rect x="0" y="548" width="380" height="12" fill="#14171a"/><rect x="40" y="522" width="80" height="6" fill="#e4572e" opacity=".6"/>')},
+{k:'o3',c:'office',n:'اجرایی تیره',sw:'#1a2024',ts:40,t:'دعوت‌نامه رسمی جلسه',s:S('<g fill="none" stroke="#d4b062" stroke-width="1.2"><path d="M190 30l14 14-14 14-14-14z"/><path d="M110 44h56M214 44h56"/></g>')},
+{k:'n1',c:'online',n:'پنجره‌ی نئونی',sw:'#6a4dff',ts:50,s:S('<rect width="380" height="42" fill="#141a42"/><line x1="0" y1="42" x2="380" y2="42" stroke="#3a4280"/><circle cx="24" cy="21" r="6" fill="#ff5f7a"/><circle cx="44" cy="21" r="6" fill="#ffd166"/><circle cx="64" cy="21" r="6" fill="#4df0ff"/>')},
+{k:'n2',c:'online',n:'شیشه‌ای روشن',ne:'Glassy Light',sw:'#a6f2de',ts:36,t:'ملاقات آنلاین',te:'Online meetup',m:'ده دقیقه زودتر وارد شوید و میکروفون و دوربین را امتحان کنید.',me:'Join 10 minutes early and test your mic and camera.',s:S('<circle cx="320" cy="60" r="90" fill="#fff" opacity=".35"/><circle cx="40" cy="480" r="110" fill="#5b3df5" opacity=".14"/><rect x="60" y="90" width="120" height="70" rx="14" fill="#fff" opacity=".55"/><circle cx="78" cy="108" r="10" fill="#5b3df5" opacity=".5"/><rect x="94" y="102" width="60" height="8" rx="4" fill="#1d1650" opacity=".35"/><rect x="94" y="114" width="44" height="8" rx="4" fill="#1d1650" opacity=".22"/><rect x="200" y="400" width="120" height="70" rx="14" fill="#1d1650" opacity=".12"/>')},
+{k:'n3',c:'online',n:'ترمینال',ne:'Terminal',ts:30,t:'> join_meeting',te:'> join_meeting',m:'اتصال را ده دقیقه زودتر تست کنید. میکروفون و دوربین آماده باشد.',me:'Join 10 minutes early. Mic and camera ready.',s:S('<rect width="380" height="36" fill="#0c170c"/><line x1="0" y1="36" x2="380" y2="36" stroke="#2f7a39"/><text x="14" y="23" fill="#7dff8a" font-size="14" font-family="Courier New,monospace">meeting.sh</text><rect x="14" y="500" width="10" height="16" fill="#7dff8a"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></rect>')},
+{k:'d6',c:'date',n:'نامه عاشقانه',ne:'Love Letter',sw:'#8c2f1b',ts:50,t:'یه نامه برات دارم',te:'A letter for you',m:'هر کلمه‌اش را با قلبم نوشتم. بازش می‌کنی؟',me:'Every word written with my heart. Will you open it?',s:S('<g transform="translate(150 18)"><rect x="0" y="0" width="80" height="96" rx="4" fill="#fffdf6" stroke="#c9a876" stroke-width="2"/><rect x="8" y="8" width="64" height="40" fill="#8c2f1b" opacity=".12"/><path d="M0 8l40 30 40-30" fill="none" stroke="#8c2f1b" stroke-width="2"/><circle cx="40" cy="66" r="12" fill="#b03a2e"/><circle cx="40" cy="66" r="6" fill="#8c2f1b"/></g><g transform="translate(286 30) rotate(12)"><rect x="0" y="0" width="52" height="62" fill="#fff" stroke="#c9a876"/><circle cx="26" cy="22" r="12" fill="#d4a373"/><path d="M6 44h40M6 50h40" stroke="#999" stroke-width="2"/></g><path d="M40 500c60-10 200-10 300 0" stroke="#8c2f1b" stroke-width="1.5" stroke-dasharray="5 5" opacity=".5"/>')},
+{k:'f4',c:'friends',n:'پیک‌نیک',ne:'Picnic Day',sw:'#e8413c',ts:58,t:'پیک‌نیک تابستونی!',te:'Summer picnic!',m:'زیرانداز، هندونه خنک و رفیق‌های درجه‌یک. جای تو خالیه!',me:'Blankets, cold watermelon & best friends. We saved you a spot!',s:S('<circle cx="190" cy="70" r="34" fill="#ffd23f" stroke="#e8413c" stroke-width="3"/><g stroke="#e8413c" stroke-width="3" stroke-linecap="round"><path d="M190 20v-12M240 70h12M140 70h-12M225 35l8-8M155 35l-8-8"/></g><ellipse cx="90" cy="505" rx="60" ry="16" fill="#2f7d4f" opacity=".85"/><ellipse cx="290" cy="515" rx="70" ry="16" fill="#2f7d4f" opacity=".7"/><path d="M60 480l20-24 20 24z" fill="#e8413c"/><circle cx="320" cy="480" r="14" fill="#fff" stroke="#2f7d4f" stroke-width="3"/>')},
+{k:'o4',c:'office',n:'گرادیان مدرن',ne:'Modern Gradient',sw:'#5b3df5',ts:40,t:'You are invited',te:'You are invited',m:'Join us for an inspiring session with our team.',me:'Join us for an inspiring session with our team.',s:S('<circle cx="330" cy="80" r="90" fill="#fff" opacity=".14"/><circle cx="40" cy="470" r="110" fill="#06b6d4" opacity=".25"/><rect x="40" y="30" width="120" height="8" rx="4" fill="#fff" opacity=".7"/><rect x="40" y="44" width="70" height="8" rx="4" fill="#fff" opacity=".4"/>')},
+{k:'n4',c:'online',n:'پادکست زنده',ne:'Live Podcast',sw:'#ff3d5f',ts:44,t:'🔴 پخش زنده',te:'🔴 We are LIVE',m:'میکروفون‌ها روشنه! بیا توی گفت‌وگوی زنده شرکت کن.',me:'Mics are on! Join our live conversation now.',s:S('<rect x="150" y="16" width="80" height="30" rx="15" fill="#ff3d5f"/><text x="190" y="37" fill="#fff" font-size="15" font-weight="bold" text-anchor="middle" font-family="Inter,sans-serif">● LIVE</text><circle cx="190" cy="110" r="26" fill="none" stroke="#ff8fb0" stroke-width="2" opacity=".6"/><rect x="182" y="88" width="16" height="30" rx="8" fill="#4df0ff"/><path d="M176 118a14 14 0 0 0 28 0" fill="none" stroke="#4df0ff" stroke-width="3"/><line x1="190" y1="132" x2="190" y2="142" stroke="#4df0ff" stroke-width="3"/>')}
+];
+var VEN={d1:'Moonlight Cream',d2:'Rose Garden',d3:'Starry Night',d4:'Sunset by the Sea',d5:'Neon Chic',f1:'Happy Sticker',f2:'Arcade',f3:'Comic Boom',o1:'Teal Classic',o2:'Minimal White',o3:'Dark Executive',n1:'Neon Window',n2:'Glassy Light'};
+V.forEach(function(v){if(!v.ne&&VEN[v.k])v.ne=VEN[v.k]});
+var TEN={d1:'Waiting for you in the moonlight',d2:'Come to my garden',d3:'Tonight the sky is ours',d4:'Sunset with me?',d5:'Tonight we glow',f2:'Game on!',f3:'Boom! Party time!',o3:'Formal meeting invitation',n1:'Neon window'};
+var MEN={d1:'A quiet dinner, a starry sky and so much left unsaid. Will you come?',d2:'The flowers wait tonight, but I only wait for you. A walk?',d3:'A blanket, a flask of tea, and a sky winking just for us.',d4:"Let's say goodbye to the sun together. The rest of the night is mine.",d5:'Lights off, neons on. One night, just for two.',f2:'One match, lots of laughs, rivals to beat. Ready?',f3:'Heroes gather and tonight we rock the city. Come along!',n1:'Click the link a few minutes early. Camera on!'};
+V.forEach(function(v){if(!v.te&&TEN[v.k])v.te=TEN[v.k];if(!v.me&&MEN[v.k])v.me=MEN[v.k]});
+var C={
+date:{n:{fa:'قرار عاشقانه',en:'Romantic Date'},t:{fa:'در مهتاب، منتظر توام',en:'Waiting for you in the moonlight'},to:{fa:'عشق من',en:'My love'},m:{fa:'یه شام آروم، یه آسمون پرستاره و کلی حرف نگفته. می‌آیی؟',en:'A quiet dinner, a starry sky and so much left unsaid. Will you come?'},pl:{fa:'مکان',en:'Venue'},p:{fa:'کافه‌ی دنج ولیعصر',en:'Cafe Central, Main St'},f:{fa:'با عشق، ...',en:'With love, ...'}},
+friends:{n:{fa:'دورهمی دوستانه',en:'Friends Gathering'},t:{fa:'دورهمی داریم!',en:"We're getting together!"},to:{fa:'رفقای گل',en:'Dear friends'},m:{fa:'قیافه‌هاتون رو بیارید، بقیه‌اش با من. دیر نیایید که پیتزاها سرد می‌شن!',en:'Just bring yourselves, I’ll handle the rest. Don’t be late — the pizza gets cold!'},pl:{fa:'مکان',en:'Venue'},p:{fa:'خونه‌ی من',en:'My place'},f:{fa:'از طرف ...',en:'From ...'}},
+office:{n:{fa:'جلسه حضوری',en:'In-person Meeting'},t:{fa:'دعوت به جلسه',en:'Meeting Invitation'},to:{fa:'جناب آقای / سرکار خانم ...',en:'Dear Mr. / Ms. ...'},m:{fa:'حضور شما برای بررسی و تصمیم‌گیری درباره‌ی ... ضروری است.',en:'Your presence is required to review and decide on ...'},pl:{fa:'محل جلسه',en:'Location'},p:{fa:'اتاق جلسات، طبقه سوم',en:'Meeting room, 3rd floor'},f:{fa:'با احترام، ...',en:'Best regards, ...'}},
+online:{n:{fa:'جلسه آنلاین',en:'Online Meeting'},t:{fa:'جلسه آنلاین',en:'Online Meeting'},to:{fa:'همکار گرامی',en:'Dear colleague'},m:{fa:'ده دقیقه زودتر وارد شوید و میکروفون و دوربین را امتحان کنید.',en:'Please join 10 minutes early and test your mic and camera.'},pl:{fa:'لینک جلسه',en:'Meeting link'},p:{fa:'https://meet.example.com/abc-defg',en:'https://meet.example.com/abc-defg'},f:{fa:'با تشکر، ...',en:'Thank you, ...'}}};
+var I18N={
+fa:{title:'کارت دعوت‌ساز فارسی',sub:'در کمتر از یک دقیقه، کارت دعوت شیک بساز و عکس بگیر.',b1:'✨ ۱۸ طرح اختصاصی',b2:'🎨 فونت فارسی و انگلیسی',b3:'📸 خروجی PNG',theme:'🌙 تیره / روشن',s1:'انتخاب دسته',s1d:'عاشقانه، دوستانه، رسمی',s2:'شخصی‌سازی',s2d:'متن، فونت و اندازه',s3:'ذخیره عکس',s3d:'ارسال در واتساپ و اینستا',sec1:'۱ — دسته‌بندی',sec2:'۲ — انتخاب طرح',ftext:'متن دعوت',ftitle:'عنوان کارت',fto:'نام مهمان',ffrom:'نام دعوت‌کننده',fdate:'تاریخ',ftime:'ساعت',fmsg:'پیام',ffont:'فونت و اندازه',ftitlef:'فونت عنوان',fbodyf:'فونت متن',fauto:'پیش‌فرض طرح (پیشنهادی)',fauto2:'پیش‌فرض طرح',fsize:'اندازه عنوان',fhint:'نکته: فونت عنوان را برای حال‌وهوا عوض کن (مثلاً کتیبه برای عاشقانه، وزیرمتن برای رسمی). اندازه با اسلایدر تنظیم می‌شود.',when:'زمان',dl:'📸 ذخیره به‌صورت عکس',cp:'کپی متن دعوت',rs:'ریست فونت',foot:'ساخته شده با 💜 برای اشتراک‌گذاری لحظه‌های خوب — تک‌فایل، مناسب GitHub Pages.',designs:'طرح',forPre:'برای ',timeJoin:' — ساعت ',timeLbl:'زمان: ',datePh:'جمعه ۱۵ آبان',timePh:'۲۰:۳۰',saved:'ذخیره شد.',making:'در حال ساخت عکس...',shot:'ذخیره نشد. از صفحه اسکرین‌شات بگیر.',copied:'متن کپی شد.',copyFail:'کپی نشد.',fontReset:'فونت به پیش‌فرض طرح برگشت.',noload:'ابزار ساخت عکس لود نشد. از صفحه اسکرین‌شات بگیر.'},
+en:{title:'Invitation Card Maker',sub:'Make a stylish invitation card in under a minute and save it as a photo.',b1:'✨ 18 exclusive designs',b2:'🎨 Persian & English fonts',b3:'📸 PNG export',theme:'🌙 Dark / Light',s1:'Pick a category',s1d:'Romantic, friends, formal',s2:'Customize',s2d:'Text, font & size',s3:'Save photo',s3d:'Share on WhatsApp & Instagram',sec1:'1 — Category',sec2:'2 — Design',ftext:'Invitation text',ftitle:'Card title',fto:'Guest name',ffrom:'Invited by',fdate:'Date',ftime:'Time',fmsg:'Message',ffont:'Font & size',ftitlef:'Title font',fbodyf:'Body font',fauto:'Design default (recommended)',fauto2:'Design default',fsize:'Title size',fhint:'Tip: match the title font to the mood (e.g. Dancing Script for romantic, Inter for formal).',when:'Time',dl:'📸 Save as photo',cp:'Copy invitation text',rs:'Reset font',foot:'Made with 💜 for sharing good moments — single file, GitHub Pages ready.',designs:'designs',forPre:'For ',timeJoin:' at ',timeLbl:'Time: ',datePh:'Friday, Nov 6',timePh:'8:30 PM',saved:'Saved.',making:'Rendering photo...',shot:'Could not save. Take a screenshot instead.',copied:'Text copied.',copyFail:'Copy failed.',fontReset:'Font reset to design default.',noload:'Photo tool failed to load. Take a screenshot.'}};
+var LANG='fa';
+try{LANG=localStorage.getItem('inv-lang')||((navigator.language||'fa').toLowerCase().indexOf('fa')===0?'fa':'en')}catch(e){LANG=((navigator.language||'fa').toLowerCase().indexOf('fa')===0?'fa':'en')}
+function T(o){return (o&&typeof o==='object')?(o[LANG]||o.fa):o}
+function VN(v){return LANG==='en'?(v.ne||v.n):v.n}
+function VT(v){return LANG==='en'?(v.te||v.t):v.t}
+function VMSG(v){return LANG==='en'?(v.me||v.m):v.m}
+var VM={};V.forEach(function(v){VM[v.k]=v});
+var cur=null;
+var $=function(i){return document.getElementById(i)};
+var ids=['title','to','date','time','place','msg','from'];
+function t(msg){return (I18N[LANG]&&I18N[LANG][msg])||I18N.fa[msg]||msg}
+function buildTabs(){
+  $('tabs').innerHTML='';
+  Object.keys(C).forEach(function(k){
+    var b=document.createElement('button');b.type='button';b.className='tab';b.dataset.c=k;
+    var n=V.filter(function(x){return x.c===k}).length;
+    var i=document.createElement('i');i.style.background=VM[V.filter(function(x){return x.c===k})[0].k].sw;
+    b.appendChild(i);var sp=document.createElement('span');sp.textContent=T(C[k].n);b.appendChild(sp);
+    var sm=document.createElement('small');sm.textContent=n+' '+t('designs');b.appendChild(sm);
+    b.setAttribute('aria-pressed',cur&&VM[cur].c===k);
+    b.onclick=function(){pick(V.filter(function(x){return x.c===k})[0].k)};$('tabs').appendChild(b);
+  });
+}
+function buildVars(){
+  var v=VM[cur];
+  $('vars').innerHTML='';
+  V.filter(function(x){return x.c===v.c}).forEach(function(x){
+    var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed',x.k===cur);
+    var i=document.createElement('i');i.style.background=x.sw;b.appendChild(i);b.appendChild(document.createTextNode(VN(x)));
+    b.onclick=function(){pick(x.k)};$('vars').appendChild(b)});
+}
+function setLang(l,keep){
+  var old=LANG;LANG=(l==='en')?'en':'fa';
+  try{localStorage.setItem('inv-lang',LANG)}catch(e){}
+  document.documentElement.lang=LANG;document.documentElement.dir=LANG==='fa'?'rtl':'ltr';
+  document.title=t('title');
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(I18N[LANG][k])el.textContent=I18N[LANG][k]});
+  $('f-date').placeholder=t('datePh');$('f-time').placeholder=t('timePh');
+  $('lang').setAttribute('aria-pressed',LANG==='en');
+  $('lang').textContent=LANG==='en'?'فارسی / EN':'EN / فارسی';
+  $('card').setAttribute('dir',LANG==='fa'?'rtl':'ltr');
+  if(keep!==false&&cur){
+    // اگر فیلدها هنوز مقدار پیش‌فرض زبان قبلی‌اند، به زبان جدید سوییچ کن
+    var pv=VM[cur];
+    ['title','msg','to','place','from'].forEach(function(k){
+      var map={title:'t',msg:'m',to:'to',place:'p',from:'f'};
+      var oldC=C[pv.c],oldD=pv[map[k]]||oldC[map[k]];
+      var oldVal=(oldD&&typeof oldD==='object')?oldD[old]:oldD;
+      if($('f-'+k).value===oldVal){var nd=pv[map[k]]||C[pv.c][map[k]];$('f-'+k).value=(nd&&typeof nd==='object')?nd[LANG]:nd}
+    });
+    if(!$('f-date').value||$('f-date').value===I18N[old].datePh)$('f-date').value=t('datePh');
+    if(!$('f-time').value||$('f-time').value===I18N[old].timePh)$('f-time').value=t('timePh');
+    buildTabs();buildVars();render();
+  }
+}
+function render(){
+  var v={},d=VM[cur],c=C[d.c];ids.forEach(function(k){v[k]=$('f-'+k).value});
+  var card=$('card');card.dataset.v=cur;$('deco').innerHTML=d.s;
+  var tf=$('f-tfont').value,bf=$('f-bfont').value,ts=$('f-tsize').value;
+  if(tf&&tf!=='auto')card.style.setProperty('--tf',tf);else card.style.removeProperty('--tf');
+  if(bf&&bf!=='auto')card.style.setProperty('--bf',bf);else card.style.removeProperty('--bf');
+  if(ts)card.style.setProperty('--ts',ts+'px');
+  $('tsize-val').textContent=ts+'px';
+  $('c-title').textContent=v.title;$('c-to').textContent=v.to?t('forPre')+v.to:'';
+  $('c-msg').textContent=v.msg;
+  $('c-when').textContent=[v.date,v.time].filter(Boolean).join(t('timeJoin'));
+  $('c-place-label').textContent=T(c.pl);$('place-label').textContent=T(c.pl);
+  var p=$('c-place');p.textContent=v.place;
+  try{localStorage.setItem('inv-v2-'+LANG,JSON.stringify({cur:cur,v:v,tf:tf,bf:bf,ts:ts}))}catch(e){}
+}
+function dflt(v){var c=C[v.c];return{title:VT(v)||T(c.t),msg:VMSG(v)||T(c.m)}}
+function pick(k){
+  var v=VM[k],pv=cur&&VM[cur],d=dflt(v),pd=pv?dflt(pv):{},c=C[v.c];
+  if(!pv||pv.c!==v.c){$('f-title').value=d.title;$('f-msg').value=d.msg;$('f-to').value=T(c.to);$('f-place').value=T(c.p);$('f-from').value=T(c.f)}
+  else{if($('f-title').value===pd.title)$('f-title').value=d.title;if($('f-msg').value===pd.msg)$('f-msg').value=d.msg}
+  cur=k;
+  // اندازه پیش‌فرض طرح را روی اسلایدر بگذار (مگر کاربر دستی عوض کرده باشد و همان دسته باشد)
+  if(!pv||pv.c!==v.c||!$('f-tsize').dataset.touched){$('f-tsize').value=v.ts||44;$('f-tsize').dataset.touched='';}
+  buildTabs();buildVars();
+  render();
+}
+ids.forEach(function(k){$('f-'+k).addEventListener('input',render)});
+$('f-tfont').addEventListener('change',render);
+$('f-bfont').addEventListener('change',render);
+$('f-tsize').addEventListener('input',function(){$('f-tsize').dataset.touched='1';render()});
+$('rs').onclick=function(){$('f-tfont').value='auto';$('f-bfont').value="'Vazirmatn',Tahoma,sans-serif";$('f-tsize').value=VM[cur].ts||44;$('f-tsize').dataset.touched='';render();say(t('fontReset'))};
+$('theme').onclick=function(){var r=document.documentElement;if(r.dataset.theme==='dark')r.dataset.theme='light';else if(r.dataset.theme==='light')r.removeAttribute('data-theme');else r.dataset.theme='dark'};
+$('lang').onclick=function(){setLang(LANG==='fa'?'en':'fa')};
+function say(m){$('status').textContent=m}
+// بازیابی ذخیره قبلی (جداگانه برای هر زبان)
+try{var sv=JSON.parse(localStorage.getItem('inv-v2-'+LANG)||localStorage.getItem('inv-v2')||'null');if(sv&&sv.v){ids.forEach(function(k){if(sv.v[k])$('f-'+k).value=sv.v[k]});if(sv.tf)$('f-tfont').value=sv.tf;if(sv.bf)$('f-bfont').value=sv.bf;if(sv.ts){$('f-tsize').value=sv.ts;$('f-tsize').dataset.touched='1'}}}catch(e){}
+if(!$('f-date').value)$('f-date').value=t('datePh');
+if(!$('f-time').value)$('f-time').value=t('timePh');
+setLang(LANG,false);
+$('dl').onclick=function(){
+  if(!window.html2canvas){say(t('noload'));return}
+  var btn=$('dl');btn.disabled=true;say(t('making'));
+  var loads=[];
+  try{
+    if(document.fonts&&document.fonts.load){
+      loads.push(document.fonts.load("700 40px 'Aref Ruqaa'"),document.fonts.load("400 40px 'Katibeh'"),document.fonts.load("400 40px 'Lalezar'"),document.fonts.load("400 40px 'Rakkas'"),document.fonts.load("700 20px 'Reem Kufi'"),document.fonts.load("800 20px 'Vazirmatn'"),document.fonts.load("800 40px 'Playfair Display'"),document.fonts.load("700 40px 'Dancing Script'"),document.fonts.load("800 20px 'Inter'"));
+    }
+  }catch(e){}
+  Promise.all(loads).catch(function(){}).then(function(){
+    return document.fonts?document.fonts.ready:Promise.resolve();
+  }).then(function(){
+    return html2canvas($('card'),{scale:3,backgroundColor:null,useCORS:true});
+  }).then(function(c){
+    return new Promise(function(res,rej){c.toBlob(function(b){b?res(b):rej(new Error('blob'))},'image/png')});
+  }).then(function(blob){
+    var url=URL.createObjectURL(blob);
+    var a=document.createElement('a');a.href=url;a.download='invitation-'+cur+'-'+LANG+'.png';document.body.appendChild(a);a.click();a.remove();
+    setTimeout(function(){URL.revokeObjectURL(url)},4000);
+    say(t('saved'));
+  }).catch(function(){say(t('shot'))}).then(function(){btn.disabled=false});
+};
+$('cp').onclick=function(){
+  var c=C[VM[cur].c];
+  var txt=[$('f-title').value,$('f-to').value?t('forPre')+$('f-to').value:'',$('f-msg').value,t('timeLbl')+$('c-when').textContent,T(c.pl)+': '+$('f-place').value,$('f-from').value].filter(Boolean).join('\n');
+  function fallback(){var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');say(t('copied'))}catch(e){say(t('copyFail'))}ta.remove()}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){say(t('copied'))},fallback)}else{fallback()}
+};
+pick((function(){try{var s0=JSON.parse(localStorage.getItem('inv-v2-'+LANG)||'null');if(s0&&VM[s0.cur])return s0.cur;var s1=JSON.parse(localStorage.getItem('inv-v2')||'null');if(s1&&VM[s1.cur])return s1.cur}catch(e){}return 'd1'})());
+</script>
+</body>
+</html>
